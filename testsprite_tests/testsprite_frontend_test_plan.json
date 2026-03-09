@@ -1,0 +1,1203 @@
+[
+  {
+    "id": "TC001",
+    "title": "Add Student - Create a new student with all required fields and verify it appears in the list",
+    "description": "Verifies an admin can add a new student from the Students page and see the student listed afterward.",
+    "category": "Add Student",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_USER}}\" into the email/username field"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Sign in\" or \"Login\" button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify URL contains \"/dashboard\""
+      },
+      {
+        "type": "action",
+        "description": "Click \"Students\" in the dashboard navigation"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify URL contains \"/dashboard/students\""
+      },
+      {
+        "type": "action",
+        "description": "Click the Plus button or \"Add Student\" button"
+      }
+    ]
+  },
+  {
+    "id": "TC002",
+    "title": "Add Student - Submit valid student details and confirm success state",
+    "description": "Verifies the Add Student form accepts valid input and completes submission successfully.",
+    "category": "Add Student",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_USER}}\" into the email/username field"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Sign in\" or \"Login\" button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify URL contains \"/dashboard\""
+      },
+      {
+        "type": "action",
+        "description": "Click \"Students\" in the dashboard navigation"
+      },
+      {
+        "type": "action",
+        "description": "Click the Plus button or \"Add Student\" button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Add Student\" is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC003",
+    "title": "Add Student - Add a uniquely identifiable student and verify it is listed on Students page",
+    "description": "Verifies that after submitting the form, the newly created student is visible in the students list.",
+    "category": "Add Student",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_USER}}\" into the email/username field"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Sign in\" or \"Login\" button"
+      },
+      {
+        "type": "action",
+        "description": "Click \"Students\" in the dashboard navigation"
+      },
+      {
+        "type": "action",
+        "description": "Click the Plus button or \"Add Student\" button"
+      },
+      {
+        "type": "action",
+        "description": "Fill \"Test Student A\" into the First Name field"
+      },
+      {
+        "type": "action",
+        "description": "Fill \"E2E\" into the Last Name field"
+      }
+    ]
+  },
+  {
+    "id": "TC004",
+    "title": "Add Student - Complete required fields, submit, and verify the exact student name is visible in the list",
+    "description": "Verifies end-to-end add student flow including list visibility after submission.",
+    "category": "Add Student",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_USER}}\" into the email/username field"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Sign in\" or \"Login\" button"
+      },
+      {
+        "type": "action",
+        "description": "Click \"Students\" in the dashboard navigation"
+      },
+      {
+        "type": "action",
+        "description": "Click the Plus button or \"Add Student\" button"
+      },
+      {
+        "type": "action",
+        "description": "Fill \"test.student.a.e2e@example.com\" into the Email field"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Submit\" or \"Create\" button"
+      }
+    ]
+  },
+  {
+    "id": "TC005",
+    "title": "Add Student - Omit a required field and verify validation error is shown",
+    "description": "Verifies the Add Student form blocks submission and shows a visible validation error when a required field is missing.",
+    "category": "Add Student",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_USER}}\" into the email/username field"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Sign in\" or \"Login\" button"
+      },
+      {
+        "type": "action",
+        "description": "Click \"Students\" in the dashboard navigation"
+      },
+      {
+        "type": "action",
+        "description": "Click the Plus button or \"Add Student\" button"
+      },
+      {
+        "type": "action",
+        "description": "Fill \"MissingEmail\" into the First Name field"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Submit\" or \"Create\" button"
+      }
+    ]
+  },
+  {
+    "id": "TC006",
+    "title": "Add Student - Verify missing required field error message is visible and user remains on the form",
+    "description": "Verifies the UI displays a clear error and does not navigate away when required fields are missing.",
+    "category": "Add Student",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_USER}}\" into the email/username field"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Sign in\" or \"Login\" button"
+      },
+      {
+        "type": "action",
+        "description": "Click \"Students\" in the dashboard navigation"
+      },
+      {
+        "type": "action",
+        "description": "Click the Plus button or \"Add Student\" button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Required\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Add Student\" is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC007",
+    "title": "Add Student - Attempt submission with invalid email format and verify visible validation feedback",
+    "description": "Verifies the form validates email format and shows a visible error when the email is not valid.",
+    "category": "Add Student",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_USER}}\" into the email/username field"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Sign in\" or \"Login\" button"
+      },
+      {
+        "type": "action",
+        "description": "Click \"Students\" in the dashboard navigation"
+      },
+      {
+        "type": "action",
+        "description": "Click the Plus button or \"Add Student\" button"
+      },
+      {
+        "type": "action",
+        "description": "Fill \"not-an-email\" into the Email field"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Invalid email\" is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC008",
+    "title": "Assign an available room to an existing student from Student Details",
+    "description": "Verifies an admin can assign an available room to a student and see the updated room in the student details view.",
+    "category": "Assign Room",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_USER}}\" into the email/username field"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Sign in\" button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify URL contains \"/dashboard\""
+      },
+      {
+        "type": "action",
+        "description": "Click \"Students\" in the main navigation"
+      },
+      {
+        "type": "action",
+        "description": "Click on an existing student in the students list to open student details"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Student Details\" is visible"
+      },
+      {
+        "type": "action",
+        "description": "Select an available room from the room dropdown (or room selection modal)"
+      }
+    ]
+  },
+  {
+    "id": "TC009",
+    "title": "Save room assignment and verify student room is updated in Student Details",
+    "description": "Verifies saving a room assignment updates the displayed room for the student.",
+    "category": "Assign Room",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_USER}}\" into the email/username field"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Sign in\" button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify URL contains \"/dashboard\""
+      },
+      {
+        "type": "action",
+        "description": "Click \"Students\" in the main navigation"
+      },
+      {
+        "type": "action",
+        "description": "Click on an existing student in the students list to open student details"
+      },
+      {
+        "type": "action",
+        "description": "Select an available room from the room dropdown (or room selection modal)"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Save\" or \"Save Assignment\" button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the assigned room value is visible in the student details room field/section"
+      }
+    ]
+  },
+  {
+    "id": "TC010",
+    "title": "Assign room using the room details modal entry point from Student Details",
+    "description": "Verifies the room selection modal can be used to pick a room and proceed to save the assignment.",
+    "category": "Assign Room",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_USER}}\" into the email/username field"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Sign in\" button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify URL contains \"/dashboard\""
+      },
+      {
+        "type": "action",
+        "description": "Click \"Students\" in the main navigation"
+      },
+      {
+        "type": "action",
+        "description": "Click on an existing student in the students list to open student details"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Select Room\" or \"Change Room\" button to open the room details modal"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Room Details\" is visible"
+      },
+      {
+        "type": "action",
+        "description": "Click on an available room option within the modal"
+      },
+      {
+        "type": "action",
+        "description": "Click the modal \"Confirm\" or \"Select\" button"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Save\" or \"Save Assignment\" button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the newly assigned room is visible in the student details room field/section"
+      }
+    ]
+  },
+  {
+    "id": "TC011",
+    "title": "Attempt to assign a full/unavailable room and verify error message is shown",
+    "description": "Verifies the UI prevents assigning an unavailable room and displays a visible error message.",
+    "category": "Assign Room",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_USER}}\" into the email/username field"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Sign in\" button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify URL contains \"/dashboard\""
+      },
+      {
+        "type": "action",
+        "description": "Click \"Students\" in the main navigation"
+      },
+      {
+        "type": "action",
+        "description": "Click on an existing student in the students list to open student details"
+      },
+      {
+        "type": "action",
+        "description": "Select a room marked as \"Full\" or \"Unavailable\" from the room dropdown (or room selection modal)"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Save\" or \"Save Assignment\" button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text indicating a room assignment error is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC012",
+    "title": "Ensure room is not changed after a failed assignment to an unavailable room",
+    "description": "Verifies the student's displayed room remains unchanged when the assignment save fails.",
+    "category": "Assign Room",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_USER}}\" into the email/username field"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Sign in\" button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify URL contains \"/dashboard\""
+      },
+      {
+        "type": "action",
+        "description": "Click \"Students\" in the main navigation"
+      },
+      {
+        "type": "action",
+        "description": "Click on an existing student in the students list to open student details"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the current assigned room value is visible in the student details room field/section"
+      },
+      {
+        "type": "action",
+        "description": "Select a room marked as \"Full\" or \"Unavailable\" from the room dropdown (or room selection modal)"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Save\" or \"Save Assignment\" button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text indicating a room assignment error is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the originally assigned room value is still visible in the student details room field/section"
+      }
+    ]
+  },
+  {
+    "id": "TC013",
+    "title": "Cancel/close room selection modal without changing the room",
+    "description": "Verifies closing the room selection modal does not change the student’s currently displayed room.",
+    "category": "Assign Room",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_USER}}\" into the email/username field"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Sign in\" button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify URL contains \"/dashboard\""
+      },
+      {
+        "type": "action",
+        "description": "Click \"Students\" in the main navigation"
+      },
+      {
+        "type": "action",
+        "description": "Click on an existing student in the students list to open student details"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the current assigned room value is visible in the student details room field/section"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Select Room\" or \"Change Room\" button to open the room details modal"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Room Details\" is visible"
+      },
+      {
+        "type": "action",
+        "description": "Click the modal \"Cancel\" button or close icon"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the originally assigned room value is still visible in the student details room field/section"
+      }
+    ]
+  },
+  {
+    "id": "TC014",
+    "title": "Attempt to save room assignment without selecting a room",
+    "description": "Verifies the UI validates required selection and shows a visible validation message when saving without a room selection.",
+    "category": "Assign Room",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_USER}}\" into the email/username field"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Sign in\" button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify URL contains \"/dashboard\""
+      },
+      {
+        "type": "action",
+        "description": "Click \"Students\" in the main navigation"
+      },
+      {
+        "type": "action",
+        "description": "Click on an existing student in the students list to open student details"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Save\" or \"Save Assignment\" button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text indicating a room selection is required is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC015",
+    "title": "Record a valid payment and see it listed in Payments",
+    "description": "Verifies an admin can add a valid payment for a selected student and see the new payment in the payments list.",
+    "category": "Make Payment",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_USER}}\" into the email/username field"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Sign in\" button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify URL contains \"/dashboard\""
+      },
+      {
+        "type": "action",
+        "description": "Click \"Payments\" in the dashboard navigation/menu"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify URL contains \"/dashboard/payments\""
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"Payments\" is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC016",
+    "title": "Submit a payment with invalid or negative amount shows validation error",
+    "description": "Verifies the payment form blocks invalid/negative amounts and displays a visible validation error message.",
+    "category": "Make Payment",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_USER}}\" into the email/username field"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Sign in\" button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify URL contains \"/dashboard\""
+      },
+      {
+        "type": "action",
+        "description": "Click \"Payments\" in the dashboard navigation/menu"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify URL contains \"/dashboard/payments\""
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"Payment form\" is visible"
+      }
+    ]
+  },
+  {
+    "id": "TC017",
+    "title": "Payment form requires an amount before submission",
+    "description": "Verifies submitting the payment form with a student selected but no amount entered shows a visible validation message.",
+    "category": "Make Payment",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_USER}}\" into the email/username field"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Sign in\" button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify URL contains \"/dashboard\""
+      },
+      {
+        "type": "action",
+        "description": "Click \"Payments\" in the dashboard navigation/menu"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify URL contains \"/dashboard/payments\""
+      },
+      {
+        "type": "action",
+        "description": "Click the student selector field"
+      },
+      {
+        "type": "action",
+        "description": "Select a student from the student selector dropdown/list"
+      }
+    ]
+  },
+  {
+    "id": "TC018",
+    "title": "Amount field rejects non-numeric input",
+    "description": "Verifies the amount field and submission flow prevents non-numeric values and shows a visible error.",
+    "category": "Make Payment",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_USER}}\" into the email/username field"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Sign in\" button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify URL contains \"/dashboard\""
+      },
+      {
+        "type": "action",
+        "description": "Click \"Payments\" in the dashboard navigation/menu"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify URL contains \"/dashboard/payments\""
+      },
+      {
+        "type": "action",
+        "description": "Click the student selector field"
+      }
+    ]
+  },
+  {
+    "id": "TC019",
+    "title": "Move a student to a different valid room and see the updated room in the student record",
+    "description": "Verifies an admin can change a student's room assignment to a different valid room and the new room is shown in the student record.",
+    "category": "Move Student to Another Room",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_USER}}\" into the email/username field"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Sign in\" button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify URL contains \"/dashboard\""
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Students\" navigation link/menu item"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify URL contains \"/dashboard/students\""
+      },
+      {
+        "type": "action",
+        "description": "Open student details for an existing student"
+      },
+      {
+        "type": "action",
+        "description": "Change the assigned room to a different valid room option"
+      },
+      {
+        "type": "action",
+        "description": "Click \"Save\" or \"Save assignment\" for the room change"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the student details shows the newly selected room as the current assigned room"
+      }
+    ]
+  },
+  {
+    "id": "TC020",
+    "title": "Attempt to move a student to an invalid room and confirm an error and no change occurs",
+    "description": "Verifies the UI prevents saving an invalid room assignment and keeps the previous room unchanged.",
+    "category": "Move Student to Another Room",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_USER}}\" into the email/username field"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Sign in\" button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify URL contains \"/dashboard\""
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Students\" navigation link/menu item"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify URL contains \"/dashboard/students\""
+      },
+      {
+        "type": "action",
+        "description": "Open student details for an existing student"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the currently assigned room value is visible in the student details"
+      },
+      {
+        "type": "action",
+        "description": "Change the assigned room to an invalid room value (one that is clearly not a valid option, if manual entry is allowed)"
+      },
+      {
+        "type": "action",
+        "description": "Click \"Save\" or \"Save assignment\" for the room change"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"error\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the assigned room shown in the student details remains the same as before"
+      }
+    ]
+  },
+  {
+    "id": "TC021",
+    "title": "Cancel out of a room change and confirm no update is applied",
+    "description": "Verifies that exiting/canceling the edit does not change the student's room assignment.",
+    "category": "Move Student to Another Room",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_USER}}\" into the email/username field"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Sign in\" button"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify URL contains \"/dashboard\""
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Students\" navigation link/menu item"
+      },
+      {
+        "type": "action",
+        "description": "Open student details for an existing student"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the currently assigned room value is visible in the student details"
+      },
+      {
+        "type": "action",
+        "description": "Change the assigned room to a different valid room option"
+      },
+      {
+        "type": "action",
+        "description": "Click \"Cancel\" or \"Close\" to dismiss the change without saving"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the assigned room shown in the student details remains the same as before"
+      }
+    ]
+  },
+  {
+    "id": "TC022",
+    "title": "Saving without selecting a new room shows validation and does not change assignment",
+    "description": "Verifies that attempting to save with no room selected (or clearing the selection) triggers validation and leaves the original room unchanged.",
+    "category": "Move Student to Another Room",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_USER}}\" into the email/username field"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Sign in\" button"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Students\" navigation link/menu item"
+      },
+      {
+        "type": "action",
+        "description": "Open student details for an existing student"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the currently assigned room value is visible in the student details"
+      },
+      {
+        "type": "action",
+        "description": "Change the assigned room to a blank/empty selection (if the UI allows clearing the room field)"
+      },
+      {
+        "type": "action",
+        "description": "Click \"Save\" or \"Save assignment\" for the room change"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"required\" is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the assigned room shown in the student details remains the same as before"
+      }
+    ]
+  },
+  {
+    "id": "TC023",
+    "title": "Move a student to another room and verify the new room appears consistently after leaving and re-opening details",
+    "description": "Verifies the updated room persists and is still shown after navigating away and returning to the student details.",
+    "category": "Move Student to Another Room",
+    "priority": "High",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_USER}}\" into the email/username field"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Sign in\" button"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Students\" navigation link/menu item"
+      },
+      {
+        "type": "action",
+        "description": "Open student details for an existing student"
+      },
+      {
+        "type": "action",
+        "description": "Change the assigned room to a different valid room option"
+      },
+      {
+        "type": "action",
+        "description": "Click \"Save\" or \"Save assignment\" for the room change"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the student details shows the newly selected room as the current assigned room"
+      },
+      {
+        "type": "action",
+        "description": "Click the control to return to the students list (such as \"Back\" or closing the details panel)"
+      },
+      {
+        "type": "action",
+        "description": "Open the same student details again"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the student details still shows the newly selected room as the current assigned room"
+      }
+    ]
+  },
+  {
+    "id": "TC024",
+    "title": "Error banner/message disappears after correcting an invalid room and successfully saving",
+    "description": "Verifies an invalid-room save attempt shows an error, and correcting to a valid room allows a successful save without the error persisting.",
+    "category": "Move Student to Another Room",
+    "priority": "Medium",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_USER}}\" into the email/username field"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Sign in\" button"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Students\" navigation link/menu item"
+      },
+      {
+        "type": "action",
+        "description": "Open student details for an existing student"
+      },
+      {
+        "type": "action",
+        "description": "Change the assigned room to an invalid room value (one that is clearly not a valid option, if manual entry is allowed)"
+      },
+      {
+        "type": "action",
+        "description": "Click \"Save\" or \"Save assignment\" for the room change"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify text \"error\" is visible"
+      },
+      {
+        "type": "action",
+        "description": "Change the assigned room to a different valid room option"
+      },
+      {
+        "type": "action",
+        "description": "Click \"Save\" or \"Save assignment\" for the room change"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the student details shows the newly selected room as the current assigned room"
+      }
+    ]
+  },
+  {
+    "id": "TC025",
+    "title": "Room options are visible/selectable when changing assignment",
+    "description": "Verifies the assigned room control provides visible room options and supports selecting one before saving.",
+    "category": "Move Student to Another Room",
+    "priority": "Low",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /login"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_USER}}\" into the email/username field"
+      },
+      {
+        "type": "action",
+        "description": "Type \"{{LOGIN_PASSWORD}}\" into the password field"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Sign in\" button"
+      },
+      {
+        "type": "action",
+        "description": "Click the \"Students\" navigation link/menu item"
+      },
+      {
+        "type": "action",
+        "description": "Open student details for an existing student"
+      },
+      {
+        "type": "action",
+        "description": "Click the assigned room field/control to view available rooms"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify element \"room options list\" is visible"
+      },
+      {
+        "type": "action",
+        "description": "Select a different room option from the visible list"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the assigned room field now displays the newly selected room prior to saving"
+      }
+    ]
+  }
+]

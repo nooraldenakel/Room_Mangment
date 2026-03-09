@@ -1,0 +1,19 @@
+{
+  "status": "commited",
+  "type": "frontend",
+  "scope": "codebase",
+  "localEndpoint": "http://localhost:3001",
+  "loginUser": "admin@youruniversity.edu",
+  "loginPassword": "admin1234",
+  "executionArgs": {
+    "projectName": "room-management",
+    "projectPath": "c:\\Users\\O_O\\ansel\\room-management",
+    "testIds": [],
+    "additionalInstruction": "test all the form inside app include sing in - sing up using this info (user = admin@youruniversity.edu , password = admin1234) then make add student and assign it to room and make payment to it then move it to another room",
+    "envs": {
+      "API_KEY": "sk-user-SZqN8y4djOWpvG7FQ6Ye_L2rU7zxATEqiYBzsMCq5BAvB9laJ4Kb_uxrRYuQ-TM91kpWtnscx6gHxrmOto0_J7ajEsBcgYiSvuhUVbTzFPrDVZj8mQEhB10OlxdV_7LPcrM"
+    }
+  },
+  "serverPort": 55333,
+  "proxy": "http://046b881c-9aa4-44b5-887f-2fb8736b9812:iJYMSzdmLgsERyK5uFzdlCAHX9K8ZdEN@tun.testsprite.com:8080"
+}

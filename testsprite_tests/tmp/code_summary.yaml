@@ -1,0 +1,88 @@
+version: "2"
+type: frontend
+tech_stack:
+  - typescript
+  - nextjs
+  - tailwindcss
+  - supabase
+routes:
+  - path: /login
+    file: src/app/login/page.tsx
+    auth_required: false
+    description: User login page
+  - path: /dashboard
+    file: src/app/dashboard/page.tsx
+    auth_required: true
+    description: Dashboard overview
+  - path: /dashboard/students
+    file: src/app/dashboard/students/page.tsx
+    auth_required: true
+    description: Student management page
+  - path: /dashboard/rooms
+    file: src/app/dashboard/rooms/page.tsx
+    auth_required: true
+    description: Room management page
+  - path: /dashboard/payments
+    file: src/app/dashboard/payments/page.tsx
+    auth_required: true
+    description: Payment management page
+features:
+  - name: User Login
+    description: Login with email and password credentials
+    files:
+      - src/app/login/page.tsx
+    entry_route: /login
+    user_interactions:
+      - Fill email input field
+      - Fill password input field
+      - Click Sign In to Dashboard button to submit
+    api_calls:
+      - method: POST
+        endpoint: /login
+    auth_required: false
+  - name: Add Student
+    description: Add a new student record
+    files:
+      - src/app/dashboard/students/page.tsx
+      - src/app/dashboard/students/StudentsClientView.tsx
+    entry_route: /dashboard/students
+    user_interactions:
+      - Click Plus button or Add Student button
+      - Fill in student details
+      - Submit form
+    api_calls:
+      - method: POST
+        endpoint: /api/students
+    auth_required: true
+  - name: Assign Room
+    description: Assign a student to a room
+    files:
+      - src/app/dashboard/students/StudentsClientView.tsx
+      - src/app/dashboard/rooms/page.tsx
+    entry_route: /dashboard/students
+    user_interactions:
+      - Select a room from the dropdown or details modal
+      - Save the assignment
+    auth_required: true
+  - name: Make Payment
+    description: Add a payment for a student
+    files:
+      - src/app/dashboard/payments/page.tsx
+    entry_route: /dashboard/payments
+    user_interactions:
+      - Select student
+      - Enter amount
+      - Submit payment
+    auth_required: true
+  - name: Move Student to Another Room
+    description: Change the room assignment of a student
+    files:
+      - src/app/dashboard/students/StudentsClientView.tsx
+      - src/app/dashboard/rooms/page.tsx
+    entry_route: /dashboard/students
+    user_interactions:
+      - Open student details
+      - Change the assigned room
+      - Save the new assignment
+    auth_required: true
+known_limitations: []

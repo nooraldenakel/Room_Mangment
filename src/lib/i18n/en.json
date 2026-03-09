@@ -1,0 +1,62 @@
+{
+    "common": {
+        "dashboard": "Dashboard",
+        "students": "Students",
+        "rooms": "Rooms",
+        "payments": "Payments",
+        "reports": "Reports",
+        "settings": "Settings",
+        "logout": "Log out",
+        "search_placeholder": "Search...",
+        "add": "Add",
+        "edit": "Edit",
+        "delete": "Delete",
+        "save": "Save",
+        "cancel": "Cancel",
+        "close": "Close",
+        "actions": "Actions",
+        "status": "Status"
+    },
+    "dashboard": {
+        "title": "Dashboard Overview",
+        "subtitle": "Welcome back! Here's what's happening today.",
+        "total_students": "Total Students",
+        "active_leases": "Active Leases",
+        "occupied_beds": "Occupied Beds",
+        "total_capacity": "Total Capacity",
+        "monthly_revenue": "Monthly Revenue",
+        "this_month": "This month",
+        "overdue_payments": "Overdue Payments",
+        "requires_attention": "Requires attention",
+        "recent_students": "Recent Students",
+        "room": "Room",
+        "quick_actions": "Quick Actions",
+        "add_new_student": "Add New Student",
+        "register_new_resident": "Register a new resident",
+        "create_new_room": "Create New Room",
+        "expand_capacity": "Expand housing capacity",
+        "record_payment": "Record Payment",
+        "log_transaction": "Log a new transaction",
+        "generate_report": "Generate Report",
+        "view_analytics": "View financial analytics"
+    },
+    "students_page": {
+        "title": "Student Management",
+        "subtitle": "View and manage student profiles, documents, and housing status.",
+        "add_student": "Add Student",
+        "search_placeholder": "Search by name, ID, or university...",
+        "housing_status": "Housing Status",
+        "payment_status": "Payment Status",
+        "export": "Export",
+        "table": {
+            "student": "Student",
+            "room_bed": "Room / Bed",
+            "university": "University",
+            "status": "Status",
+            "payment": "Payment",
+            "actions": "Actions",
+            "no_results": "No students found matching your criteria.",
+            "view": "View"
+        }
+    }
+}
