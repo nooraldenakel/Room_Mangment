@@ -54,7 +54,7 @@ export function Sidebar() {
                 <button
                     onClick={toggleSidebar}
                     className="absolute -right-3.5 top-6 z-10 flex h-7 w-7 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-500 hover:text-slate-900 shadow-sm dark:border-slate-800 dark:bg-slate-950 dark:hover:text-slate-100 transition-transform hover:scale-105 active:scale-95"
-                    title={isCollapsed ? t("common.expand", "Expand") : t("common.collapse", "Collapse")}
+                    title={isCollapsed ? t("common.expand") : t("common.collapse")}
                 >
                     {isCollapsed ? <ChevronRight className="h-4 w-4" /> : <ChevronLeft className="h-4 w-4" />}
                 </button>
@@ -98,11 +98,11 @@ export function Sidebar() {
                     </div>
                 </div>
                 <form action={logout}>
-                    <Button 
-                        variant="ghost" 
+                    <Button
+                        variant="ghost"
                         size={isCollapsed ? "default" : "sm"}
-                        type="submit" 
-                        title={isCollapsed ? t("common.logout", "Log out") : undefined}
+                        type="submit"
+                        title={isCollapsed ? t("common.logout") : undefined}
                         className={`text-slate-500 hover:text-red-600 hover:bg-red-50 dark:hover:bg-red-950/30 ${isCollapsed ? "p-2 h-10 w-10 rounded-full" : "px-2"}`}
                     >
                         <LogOut className="w-5 h-5 flex-shrink-0" />
